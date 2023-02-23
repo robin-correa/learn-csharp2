@@ -10,12 +10,14 @@ class Program
         person.Introduce("Regina"); // Hi Regina, I am Robin
 
         // [Constructors]
-        var customer = new Customer(1, "Robin");
-
+        //var customer = new Customer(1, "Robin");
+        var customer = new Customer();
         var order = new Order();
         customer.Orders.Add(order);
 
         Console.WriteLine(customer.Id);
         Console.WriteLine(customer.Name);
+
+
     }
 }
