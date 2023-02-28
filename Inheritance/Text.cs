@@ -9,9 +9,4 @@ public class Text : PresentationObject
     {
         Console.WriteLine("We added a link to {0}", url);
     }
-
-    public void Duplicate()
-    {
-        Console.WriteLine("Object was duplicated");
-    }
 }
