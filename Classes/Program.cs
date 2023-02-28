@@ -1,4 +1,5 @@
 ﻿namespace Classes;
+using Methods;
 
 class Program
 {
@@ -18,6 +19,27 @@ class Program
         Console.WriteLine(customer.Id);
         Console.WriteLine(customer.Name);
 
+        // [Methods]
+        UsePoints();
 
+
+    }
+    static void UsePoints()
+    {
+        try
+        {
+            var point = new Point(10, 2);
+            point.Move(new Point(40, 60));
+            Console.WriteLine("Point is at ({0}, {1})", point.X, point.Y); // Point is at (40, 60)
+
+            // Overloading
+            point.Move(100, 200);
+            Console.WriteLine("Point is at ({0}, {1})", point.X, point.Y); // Point is at (100, 200)
+        }
+        catch (System.Exception)
+        {
+
+            System.Console.WriteLine("An unexpected error occured.");
+        }
     }
 }
