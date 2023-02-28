@@ -4,6 +4,7 @@ using Fields;
 using AccessModifiers;
 using Properties;
 using Indexers;
+using Inheritance;
 
 class Program
 {
@@ -111,6 +112,14 @@ class Program
         var cookie = new HttpCookie();
         cookie["name"] = "Robin";
         Console.WriteLine(cookie["name"]);
+
+        // [Inheritance]
+        // using Inheritance/;
+        Console.WriteLine("[Inheritance]");
+        var text = new Text();
+        text.Width = 100;
+        text.Copy(); // Object copied to clipboard (from PresentationObject class)
+
     }
     static void UseParams()
     {
