@@ -1,11 +1,13 @@
 ﻿namespace Classes;
 using Methods;
+using Fields;
 
 class Program
 {
     static void Main(string[] args)
     {
         // [Classes]
+        Console.WriteLine("Classes:");
         // Person class is in Classes/Person.cs
         var person = Person.Parse("Robin");
         person.Introduce("Regina"); // Hi Regina, I am Robin
@@ -21,6 +23,7 @@ class Program
 
         // [Methods]
 
+        Console.WriteLine("Methods:");
         // Overloading
         UsePoints();
 
@@ -51,6 +54,21 @@ class Program
         {
             Console.WriteLine("Conversion failed (TryParse).");
         }
+
+        // [Fields]
+
+        Console.WriteLine("Fields:");
+        var customer2 = new Customer2(1);
+        customer2.Orders.Add(new Order());
+        customer2.Orders.Add(new Order());
+        Console.WriteLine(customer2.Orders.Count); // 2
+
+        // To demo reinitialization of List object within the method
+        customer2.Promote();
+        Console.WriteLine(customer2.Orders.Count); // 0
+
+
+
     }
     static void UseParams()
     {
