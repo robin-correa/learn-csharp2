@@ -4,7 +4,7 @@ using Classes;
 public class Customer2
 {
     public int Id;
-    public string Name;
+    public string? Name;
     // Add "readonly" modifier if you think you can only initialize the object once.
     public readonly List<Order> Orders = new List<Order>();
 

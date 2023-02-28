@@ -3,6 +3,7 @@ using Methods;
 using Fields;
 using AccessModifiers;
 using Properties;
+using Indexers;
 
 class Program
 {
@@ -88,11 +89,28 @@ class Program
 
         // [Properties]
         // using Properties/;
+
+        /*
+            - A property is a kind of class member that is used for providing access to fields of a class.
+            - As a best practice, we must declare fields as private and create public properties to provide access to them.
+            - A property encapsulates a get and a set method
+        */
+
         Console.WriteLine("[Properties]");
         var person3 = new Person3(new DateTime(1994, 11, 21));
         Console.WriteLine(person3.Age); // 28 (as of 28 Feb 2023)
 
+        // [Indexers]
+        // using Indexers/;
 
+        /*
+        - Indexer is a special kind of property that allows accessing elements of a list by an index.
+        - If a class has the semantics of a list, or collection, we can define an indexer property for it. This way it’s easier to get or set items in the collection.
+        */
+        Console.WriteLine("[Indexers]");
+        var cookie = new HttpCookie();
+        cookie["name"] = "Robin";
+        Console.WriteLine(cookie["name"]);
     }
     static void UseParams()
     {
