@@ -5,6 +5,7 @@ using AccessModifiers;
 using Properties;
 using Indexers;
 using Inheritance;
+using Composition;
 
 class Program
 {
@@ -120,6 +121,14 @@ class Program
         text.Width = 100;
         text.Copy(); // Object copied to clipboard (from PresentationObject class)
 
+        // [Composition]
+        // using Composition/;
+        Console.WriteLine("[Composition]");
+        var dbMigrator = new DBMigrator(new Logger());
+        var logger = new Logger();
+        var installer = new Installer(logger);
+        dbMigrator.Migrate(); // We are migrating....
+        installer.Install(); // We are installing....
     }
     static void UseParams()
     {
