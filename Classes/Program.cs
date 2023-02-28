@@ -197,6 +197,11 @@ class Program
         // using Constructors/;
         Console.WriteLine("[Constructors]");
         var car = new Car("XYZ1234");
+        /*
+            Output in sequence:
+            Vehicle is being initialized. XYZ1234
+            Car is being initialized. XYZ1234
+        */
 
     }
     static void UseParams()
