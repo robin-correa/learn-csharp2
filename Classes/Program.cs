@@ -2,6 +2,7 @@
 using Methods;
 using Fields;
 using AccessModifiers;
+using Properties;
 
 class Program
 {
@@ -23,7 +24,7 @@ class Program
         Console.WriteLine(customer.Name);
 
         // [Methods]
-        // using Methods;
+        // using Methods/;
         Console.WriteLine("[Methods]");
         // Overloading
         UsePoints();
@@ -57,7 +58,7 @@ class Program
         }
 
         // [Fields]
-        // using Fields;
+        // using Fields/;
 
         Console.WriteLine("[Fields]");
         var customer2 = new Customer2(1);
@@ -70,7 +71,7 @@ class Program
         Console.WriteLine(customer2.Orders.Count); // 0
 
         // [Access Modifiers]
-        // using AccessModifiers;
+        // using AccessModifiers/;
         /*
             Notes:
             - In C# we have 5 access modifiers: public, private, protected, internal and protected internal.
@@ -86,7 +87,10 @@ class Program
         Console.WriteLine(person2.GetBirthdate()); // 21/11/1994 00:00:00
 
         // [Properties]
+        // using Properties/;
         Console.WriteLine("[Properties]");
+        var person3 = new Person3(new DateTime(1994, 11, 21));
+        Console.WriteLine(person3.Age); // 28 (as of 28 Feb 2023)
 
 
     }
