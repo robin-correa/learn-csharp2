@@ -203,6 +203,13 @@ class Program
             Car is being initialized. XYZ1234
         */
 
+        // [Boxing and Unboxing]
+        // Boxing - Boxing happens when a value type instance is converted to an object reference.
+        object obj = 1;
+
+        // Unboxing - Unboxing is the opposite: when an object reference is converted to a value type.
+        int i = (int)obj;
+
     }
     static void UseParams()
     {
