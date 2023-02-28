@@ -6,6 +6,8 @@ using Properties;
 using Indexers;
 using Inheritance;
 using Composition;
+using Casting;
+using Constructors;
 
 class Program
 {
@@ -162,6 +164,52 @@ class Program
                         As the hierarchy grows (or variations of classes increase), the hierarchy, however, becomes fragile. 
                         And that's where composition can give you a better design.
         */
+
+        // [Casting]
+        // using Casting/;
+        Console.WriteLine("[Casting] (No output)");
+
+        // Upcasting (implicit)
+        Circle circle = new Circle();
+        Shape shape = circle; // In the background: it's casted as Shape class, no conversion is required
+
+        // Downcasting
+        Circle anotherCircle = (Circle)shape;
+
+        // Car car = (Car) shape; // throws InvalidCastException
+
+        // To prevent InvalidCastException, use "as" keyword
+        /*
+            Car car = (Car) obj; // Error
+            Car car = obj as Car;
+
+            if (car != null) {
+                ...
+            }
+
+            // "is" keyword is used to check the type of an object
+            if (obj is Car) {
+                Car car = (Car) obj;
+            }
+        */
+
+        // [Constructors]
+        // using Constructors/;
+        Console.WriteLine("[Constructors]");
+        var car = new Car("XYZ1234");
+        /*
+            Output in sequence:
+            Vehicle is being initialized. XYZ1234
+            Car is being initialized. XYZ1234
+        */
+
+        // [Boxing and Unboxing]
+        // Boxing - Boxing happens when a value type instance is converted to an object reference.
+        object obj = 1;
+
+        // Unboxing - Unboxing is the opposite: when an object reference is converted to a value type.
+        int i = (int)obj;
+
     }
     static void UseParams()
     {
