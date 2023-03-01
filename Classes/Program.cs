@@ -9,6 +9,7 @@ using Composition;
 using Casting;
 using Constructors;
 using MethodOverriding;
+using AbstractClasses;
 
 class Program
 {
@@ -226,6 +227,15 @@ class Program
             Draw a Rectangle
             Draw a Triangle
         */
+
+        // [Abstract Classes]
+        // using AbstractClasses/;
+        Console.WriteLine("[Abstract Classes]");
+        var circle3 = new Circle3();
+        circle3.Draw(); // Draw a Circle
+
+        var rectangle3 = new Rectangle3();
+        rectangle3.Draw(); // Draw a Rectangle
 
     }
     static void UseParams()
