@@ -237,6 +237,27 @@ class Program
         var rectangle3 = new Rectangle3();
         rectangle3.Draw(); // Draw a Rectangle
 
+        /*
+            Notes:
+                Method Overriding
+                - Method overriding means changing the implementation of an inherited method.
+                - If a declare a method as virtual in the base class, we can override it in a derived class.
+
+                Abstract Classes and Members
+                - Abstract modifier states that a class or a member misses implementation. 
+                    We use abstract members when it doesn’t make sense to implement them in a base class. 
+                    For example, the concept of drawing a shape is too abstract. We don’t know how to draw a shape. 
+                    This needs to be implemented in the derived classes.
+                - When a class member is declared as abstract, that class needs to be declared as abstract as well. That means that class is not complete.
+                - In derived classes, we need to override the abstract members in the base class.
+
+                Sealed Classes and Members
+                - If applied to a class, prevents derivation from that class.
+                - If applied to a method, prevents overriding of that method in a derived class.
+                - The string class is declared as sealed, and that’s why we cannot inherit from it.
+
+        */
+
     }
     static void UseParams()
     {
