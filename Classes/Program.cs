@@ -8,6 +8,7 @@ using Inheritance;
 using Composition;
 using Casting;
 using Constructors;
+using MethodOverriding;
 
 class Program
 {
@@ -209,6 +210,22 @@ class Program
 
         // Unboxing - Unboxing is the opposite: when an object reference is converted to a value type.
         int i = (int)obj;
+
+        // [Method Overriding]
+        // using MethodOverriding/;
+        Console.WriteLine("[Method Overriding]");
+        var shapes2 = new List<Shape2>();
+        shapes2.Add(new Circle2());
+        shapes2.Add(new Rectangle2());
+        shapes2.Add(new Triangle2());
+
+        var canvas = new Canvas();
+        canvas.DrawShapes(shapes2);
+        /* Output:
+            Draw a Circle
+            Draw a Rectangle
+            Draw a Triangle
+        */
 
     }
     static void UseParams()
